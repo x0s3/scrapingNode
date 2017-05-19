@@ -1,0 +1,29 @@
+extends layout
+
+block content
+
+  h1 Todos los paises que tienes de cada país
+  table
+    thead
+      tr
+        th País&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        th Imagen
+        th Yvert
+        th Edifil
+        th Michel
+        th Cob
+        th Scott
+        th Añadir a la coleccion
+    tbody
+      each item in resSello
+        tr
+         form(method='POST' action='/anadir')
+          td= item.any
+          td: img(src="data:image/jpeg;base64,"+item.imatge)
+          input(type='hidden' name='imagen' value=item.id)
+          td= item.yvert
+          td= item.edifil
+          td= item.michel
+          td= item.cob
+          td= item.scott
+          td: button.btn.btn-default(id='anadir' type='submit' onclick='alert("Añadido")') Añadir

@@ -1,0 +1,20 @@
+extends layout
+
+block content
+
+  h1 Login AppSellos Jose
+  hr
+
+  .container
+    form.form-signin(action="/login", method="POST")
+        h2.form-signin-heading Login Usuarios
+            hr
+            p Correo electrónico:
+              input.input-block-level(type="email", name="email", placeholder="Entra tu correo")
+            br
+            p Contraseña:
+              input.input-block-level(type="password", name="password", placeholder="Entra tu contraseña")
+            br
+            button.btn.btn-large.btn-primary(type="submit") Registrarse
+    if(error)
+      div.alert.alert-danger="Error: correo o contraseñas incorrectas."

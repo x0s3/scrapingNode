@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+  h1 Todos tus sellos de cada país
+  small Click en pais para visualizarlos
+  table
+    thead
+      tr
+        th País&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        th Cantidad
+    tbody
+      each item in resSello
+        tr
+          td: a(href="/mostrarMios/"+item.inicial_pais,target="_blank") #{item.inicial_pais}
+          td= item.total_pais

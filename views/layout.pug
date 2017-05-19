@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet' href='/stylesheets/bootstrap.min.css')
+  body
+  nav.navbar.navbar-light.main-nav.container
+    ul.nav.navbar-nav
+      li.nav-item
+        a.nav-link(href='/') Home
+      li.nav-item
+        a.nav-link(href='/verPaises') Mostrar Sellos
+      li.nav-item
+        a.nav-link(href='/mostrarSellos') Mis Sellos
+      li.nav-item
+        a.nav-link(href='/logout') Logout
+    block content

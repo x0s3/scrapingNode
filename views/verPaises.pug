@@ -1,0 +1,14 @@
+extends layout
+
+block content
+
+  h1 Todos los paises que estan disponibles en la base de datos
+  table
+    thead
+      tr
+        th País
+    tbody
+      each item in resPais
+        tr
+          td= item.Tables_in_daw08m2
+          td: a.btn.btn-default(id='anadir' href='/mostrar/'+item.Tables_in_daw08m2) Ir

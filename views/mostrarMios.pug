@@ -1,0 +1,14 @@
+extends layout
+
+block content
+
+  h1 Sellos
+  table
+    thead
+      tr
+        th Imagen
+    tbody
+      each item in resSello
+        tr
+          td: img(src='data:image/jpeg;base64,'+item.imatge)
+          td: button.btn.btn-default(id='anadir' type='submit' onclick='alert("Eliminado")') Eliminar

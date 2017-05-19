@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= xose
+  p x0s3 es dios #{xose}
+  if(xose=="x0s3")
+    p eres el mejor
+  else
+    p tu no eres xose
+  table
+    thead
+      tr
+        th Nombre Usuario
+        th Correo
+    tbody
+        each item in applications
+          tr
+            td= item.username
+            td= item.email
